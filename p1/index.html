@@ -8,25 +8,23 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
     <style>
-        /* Agregamos estilos para el botón mute */
         .mute {
             position: fixed;
             bottom: 0;
             right: 0;
             cursor: pointer;
             display: block;
-            width: 15px; /* Ancho ajustado a 10px */
-            height: 15px; /* Altura ajustada a 10px */
-            padding: 20px; /* Padding de 20px */
+            width: 15px; 
+            height: 15px; 
+            padding: 20px; 
         }
     </style>
             <script>
-        // Bloquear clic derecho (sin mensaje)
         document.addEventListener('contextmenu', (e) => {
-            e.preventDefault(); // Solo esto, sin alert
+            e.preventDefault(); 
         });
 
-        // Bloquear atajos de teclado para DevTools (también sin alerta)
+
         document.addEventListener('keydown', (e) => {
             if (
                 e.ctrlKey && (e.key === 'u' || e.key === 'U') ||  // Ctrl+U
