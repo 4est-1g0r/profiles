@@ -1,0 +1,64 @@
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+            <script>
+        // Bloquear clic derecho (sin mensaje)
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault(); // Solo esto, sin alert
+        });
+
+        // Bloquear atajos de teclado para DevTools (también sin alerta)
+        document.addEventListener('keydown', (e) => {
+            if (
+                e.ctrlKey && (e.key === 'u' || e.key === 'U') ||  // Ctrl+U
+                e.key === 'F12' ||                               // F12
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||     // Ctrl+Shift+I
+                (e.metaKey && e.altKey && e.key === 'I')          // Cmd+Opt+I (Mac)
+            ) {
+                e.preventDefault(); // Silencioso, sin alerta
+            }
+        });
+        </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('*').forEach(el => {
+      el.setAttribute('draggable', 'false');
+    });
+  });
+</script>
+
+    
+  </head>
+<div class="cuerpo">
+    <div class="cabecera">
+      <a class='button1'><img class='button1' onmouseout='this.src=&apos;Cabecera1.png&apos;' onmouseover='this.src=&apos;Cabecera2.png&apos;' src='Cabecera1.png'/></a>
+    </div>
+<div class="cuerpo1">
+    <div class="texto">
+      <a class='button12'><img class='button12' onmouseout='this.src=&apos;Caja3.png&apos;' onmouseover='this.src=&apos;Caja3-1.png&apos;' src='Caja3.png'/></a>
+    </div>
+<div class="cuerpo2">
+    <div class="relleno">
+      <a class='button2'><img class='button2' onmouseout='this.src=&apos;Imagen-Amigos.png&apos;' onmouseover='this.src=&apos;Imagen-Amigos-2.png&apos;' src='Imagen-Amigos.png'/></a>
+    </div>
+    <div class="amigos">
+      <a class='button3' href='#'><img class='button3' onmouseout='this.src=&apos;Poocky.png&apos;' onmouseover='this.src=&apos;Poocky-2.png&apos;' src='Poocky.png'/></a>
+    </div>
+    <div class="amigos2">
+      <a class='button4' href='#'><img class='button4' onmouseout='this.src=&apos;Sinbad.png&apos;' onmouseover='this.src=&apos;Sinbad-2.png&apos;' src='Sinbad.png'/></a>
+    </div>
+</div>
+<div class="cuerpo3">
+    <div class="footer">
+        <a class='button5'> <img src="Footer66.png"></a>
+    </div>
+</div>
+<div class="cuerpo4">
+    <div class="firma">
+      <a class='button6' href='#'><img class='button6' onmouseout='this.src=&apos;Made-by-Schroederz.png&apos;' onmouseover='this.src=&apos;Made-by-Schroederz2.png&apos;' src='Made-by-Schroederz.png'/></a>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+body {
+    background: #000000;
+  }
+  
+  img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .cabecera {
+    display: flex;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 70px;
+  }
+ 
+  .cuerpo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: block;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .texto {
+    display: flex;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+ 
+  .cuerpo1 {
+    display: block;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .cuerpo2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 5px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .relleno {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 25px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .amigos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 15px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .amigos2 {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .cuerpo3 {
+    display: block;
+    padding-top: 5px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+ 
+  .cuerpo4 {
+    display: block;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .firma {
+    display: flex;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+ 
