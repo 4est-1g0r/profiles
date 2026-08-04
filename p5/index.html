@@ -1,0 +1,43 @@
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+            <script>
+        // Bloquear clic derecho (sin mensaje)
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault(); // Solo esto, sin alert
+        });
+
+        // Bloquear atajos de teclado para DevTools (también sin alerta)
+        document.addEventListener('keydown', (e) => {
+            if (
+                e.ctrlKey && (e.key === 'u' || e.key === 'U') ||  // Ctrl+U
+                e.key === 'F12' ||                               // F12
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||     // Ctrl+Shift+I
+                (e.metaKey && e.altKey && e.key === 'I')          // Cmd+Opt+I (Mac)
+            ) {
+                e.preventDefault(); // Silencioso, sin alerta
+            }
+        });
+        </script>
+    
+                        <script>
+                          document.addEventListener('DOMContentLoaded', () => {
+                            document.querySelectorAll('*').forEach(el => {
+                              el.setAttribute('draggable', 'false');
+                            });
+                          });
+                        </script>
+
+    
+  </head>
+<div class="cuerpo">
+    <div class="boton">
+      <a class='boton1'><img class='boton1' onmouseout='this.src=&apos;val3.png&apos;' onmouseover='this.src=&apos;val3a.png&apos;' src='val3.png'/></a>
+    </div>
+    <br>
+<div class="cuerpo2">
+    <div class="bot0n">
+      <a class='boton1'><img class='boton1' onmouseout='this.src=&apos;val1.png&apos;' onmouseover='this.src=&apos;val1a.png&apos;' src='val1.png'/></a>
+    </div>
