@@ -8,32 +8,32 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
     <style>
-        /* Agregamos estilos para el botón mute */
+      
         .mute {
             position: fixed;
             bottom: 0;
             right: 0;
             cursor: pointer;
             display: block;
-            width: 16px; /* Ancho ajustado a 15px */
-            height: 16px; /* Altura ajustada a 15px */
-            padding: 20px; /* Padding de 20px */
+            width: 16px; 
+            height: 16px; 
+            padding: 20px; 
         }
     </style>
 
             <script>
-        // Bloquear clic derecho (sin mensaje)
+
         document.addEventListener('contextmenu', (e) => {
-            e.preventDefault(); // Solo esto, sin alert
+            e.preventDefault(); 
         });
 
-        // Bloquear atajos de teclado para DevTools (también sin alerta)
+
         document.addEventListener('keydown', (e) => {
             if (
-                e.ctrlKey && (e.key === 'u' || e.key === 'U') ||  // Ctrl+U
-                e.key === 'F12' ||                               // F12
-                (e.ctrlKey && e.shiftKey && e.key === 'I') ||     // Ctrl+Shift+I
-                (e.metaKey && e.altKey && e.key === 'I')          // Cmd+Opt+I (Mac)
+                e.ctrlKey && (e.key === 'u' || e.key === 'U') ||  
+                e.key === 'F12' ||                               
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||    
+                (e.metaKey && e.altKey && e.key === 'I')          
             ) {
                 e.preventDefault(); // Silencioso, sin alerta
             }
@@ -73,7 +73,7 @@
             </div>
             <div class="cuerpo3">
                 <div class="bot0n3">
-                    <a class='button3' href='https://xat.me/schroederz'>
+                    <a class='button3' href='#'>
                         <img class='button3'
                             onmouseout='resetImage(this, "1xd.png")'
                             onmouseover='playSoundAndChangeImage(this, "click5.wav", "1xc3.png")'
@@ -83,7 +83,6 @@
             </div>
         </div>
 
-        <!-- Añadimos el botón mute1 -->
         <img src="muted1.png" alt="mute1" class="mute" onclick="ocultarMute()">
 
         <audio id="sonido" preload="auto">
@@ -97,7 +96,7 @@
                 var soundSource = document.getElementById('sound1');
 
                 soundSource.src = soundFileName;
-                audio.load(); // Recargar el audio para que cambie la pista
+                audio.load(); 
                 audio.play();
 
                 image.src = newImageSrc;
@@ -110,11 +109,10 @@
             function ocultarMute() {
                 var muteButton = document.querySelector('.mute');
                 muteButton.style.display = 'none';
-                // También puedes añadir lógica para evitar que vuelva a aparecer.
+
                 document.removeEventListener('click', ocultarMute);
             }
 
-            // Añadimos un evento para ocultar el mute1 al hacer clic en cualquier parte de la pantalla
             document.addEventListener('click', ocultarMute);
         </script>
 </body>
