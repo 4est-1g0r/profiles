@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+            <script>
+        // Bloquear clic derecho (sin mensaje)
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault(); // Solo esto, sin alert
+        });
+
+        // Bloquear atajos de teclado para DevTools (también sin alerta)
+        document.addEventListener('keydown', (e) => {
+            if (
+                e.ctrlKey && (e.key === 'u' || e.key === 'U') ||  // Ctrl+U
+                e.key === 'F12' ||                               // F12
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||     // Ctrl+Shift+I
+                (e.metaKey && e.altKey && e.key === 'I')          // Cmd+Opt+I (Mac)
+            ) {
+                e.preventDefault(); // Silencioso, sin alerta
+            }
+        });
+        </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('*').forEach(el => {
+      el.setAttribute('draggable', 'false');
+    });
+  });
+</script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="background"></div>
+        <div class="logo-container">
+            <img class="logo" src="LOGO.png" alt="Logo" draggable="false">
+        </div>
+        <div class="chucky-container">
+            <img class="chucky" src="chucky1.png" alt="Chucky" draggable="false">
+        </div>
+        <div class="luz-container">
+            <img class="luz" src="LUZ.png" alt="Luz">
+        </div>
+        <div class="new-element-container">
+            <img class="new-element" src="Rectangulo4c.png" alt="New Element">
+        </div>
+        <img class="foreground" src="OLDSNAKE.png" alt="Old Snake" draggable="false">
+        <div class="text-container">
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <div class="amigos-container">
+            <img class="amigos" src="AMIGOS.png" alt="Amigos">
+        </div>
+<div class="dehmi-container">
+    <a href="#">
+        <img class="dehmi" src="DEHMI1.png" alt="DEHMI">
+    </a>
+</div>
+<div class="sinbi-container">
+    <a href="#">
+        <img class="sinbi" src="SINBI1.png" alt="SINBI">
+    </a>
+</div>
+<div class="myt-container">
+    <a href="#">
+        <img class="myt" src="MYT1-copia.png" alt="MYT">
+    </a>
+</div>
+    </div>
+
+    <script src="script.js"></script>
+
+<!-- Añadimos el botón mute -->
+<img src="muted.png" alt="mute" class="mute" onclick="ocultarMute()">
+
+<script>
+    function ocultarMute() {
+        var muteButton = document.querySelector('.mute');
+        muteButton.style.display = 'none';
+        document.removeEventListener('click', ocultarMute);
+    }
+
+    document.addEventListener('click', ocultarMute);
+</script>
+
+
+
+
+<!-- AQUÍ ESTARÁ el reproductor de música -->
+
+<div id="music-player">
+    <div class="playerbutton"><i class="fa-solid fa-play"></i></div>
+    <div class="pausebutton"><i class="fa-solid fa-pause"></i></div>
+
+    <!-- SONG NAME HERE -->
+    music 🎶
+
+    <!-- HOW TO CHANGE THE MUSIC -->
+    <audio src="icecube2.wav"></audio>
+</div>
+
+
+
+<!-- Listo -->
+
+
+<!-- VISTA NO APTA PARA CELULARES -->
+    <div class="texto-pequeno">
+        <h1>Visualización no apta para celulares || View not suitable for phones</h1>
+        <p>Por favor, visita esta página desde un dispositivo con una pantalla más grande. || Please visit this page from a device with a larger screen.</p>
+    </div>
+
+
+</body>
+
+</html>

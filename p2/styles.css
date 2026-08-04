@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #09050A;
+    background-size: cover;
+    z-index: -2;
+}
+
+.luz-container {
+    position: absolute;
+    top: 0vh;
+    left: -21vw;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1; 
+}
+
+.luz {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    z-index: 0;
+}
+
+.new-element-container {
+    position: absolute;
+    top: 40.3vh;
+    left: 13.8vw;
+    width: 27.5vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 5; /* New Element está delante de todos */
+}
+
+.new-element {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    z-index: 0;
+}
+
+.chucky-container {
+    position: absolute;
+    top: 23vh;
+    left: 5.3vw;
+    width: 83vw;
+    height: 83vh;
+    z-index: -1; /* CHUCKY está detrás de LUZ */
+}
+
+.chucky {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    z-index: 0;
+}
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1; /* LOGO está detrás de LUZ y CHUCKY */
+}
+
+.logo {
+    width: 54vw;
+    height: 48vh;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.foreground {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    object-fit: contain;
+    z-index: 2; /* OLDSNAKE está en el primer plano */
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.text-container {
+    position: absolute;
+    top: 85.2vh;
+    left: -22.5vw;
+    width: 100vw;
+    height: 10vh;
+    z-index: 6; /* El texto está por delante de New Element */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    font-size: 0.68vw; /* Utiliza vw en lugar de pt */
+    color: #5c5c5c;
+    text-align: justify;
+    width: 22.4%;
+}
+.amigos-container {
+    position: absolute;
+    top: 50vh; 
+    left: 4vw; 
+    width: 15vw; 
+    height: 30vh; 
+    pointer-events: none; /* Para que no afecte a los eventos del mouse */
+    z-index: -2; 
+}
+
+.amigos {
+    width: 20%;
+    height: 20%;
+    object-fit: contain;
+}
+.dehmi-container {
+    position: absolute;
+    top: 54vh; 
+    left: 2.5vw; 
+    width: 6vw; 
+    height: auto; 
+}
+
+.dehmi {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sinbi-container {
+    position: absolute;
+    top: 60vh; 
+    left: 2.5vw; 
+    width: 6vw; 
+    height: auto; 
+}
+
+.sinbi {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.myt-container {
+    position: absolute;
+    top: 66vh; 
+    left: 2.5vw; 
+    width: 6vw; 
+    height: auto; 
+}
+
+.myt {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* el Mute */
+
+.mute {
+            position: fixed;
+            right: 0;
+            cursor: pointer;
+            display: block;
+            width: 20px; 
+            height: 20px; 
+            padding: 20px; 
+}
+
+
+/* el reproductor*/
+
+#music-player {
+    position: fixed;
+    top: 96.1vh;
+    right: 2.5vh;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    opacity: 50%;
+    color: #535353;
+    font-size: 0.8vw;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.playerbutton, .pausebutton {
+    position: fixed;
+    top: 96.3vh;
+    right: 5vw;
+    width: 1vw;
+    height: 1vw;
+    overflow: hidden;
+    margin-right: 1px;
+    cursor: pointer;
+}
+
+.playerbutton i.fa-play, .pausebutton i.fa-pause {
+    color: #535353;
+    transition: color 0.3s;
+}
+
+#music-player:hover .playerbutton i.fa-play, #music-player:hover .pausebutton i.fa-pause {
+    color: #3b272e;
+}
+
+#music-player .pausebutton {
+    display: none;
+}
+
+#music-player audio {
+    display: none;
+    color: white;
+}
+
+
+/* MENSAJE PARA CELULARES */
+
+/* Estilos para pantallas pequeñas (menores o iguales a 600px de ancho) */
+.texto-pequeno {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    padding: 20vh;
+    box-sizing: border-box;
+}
+
+/* Fondo negro solo para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+    .texto-pequeno {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+  /* Ocultar el enlace de GitHub */
+  .github-link {
+    display: none !important;
+  }
