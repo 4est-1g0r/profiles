@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <style>
+        /* Agregamos estilos para el botón mute */
+        .mute {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            cursor: pointer;
+            display: block;
+            width: 15px; /* Ancho ajustado a 10px */
+            height: 15px; /* Altura ajustada a 10px */
+            padding: 20px; /* Padding de 20px */
+        }
+    </style>
+            <script>
+        // Bloquear clic derecho (sin mensaje)
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault(); // Solo esto, sin alert
+        });
+
+        // Bloquear atajos de teclado para DevTools (también sin alerta)
+        document.addEventListener('keydown', (e) => {
+            if (
+                e.ctrlKey && (e.key === 'u' || e.key === 'U') ||  // Ctrl+U
+                e.key === 'F12' ||                               // F12
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||     // Ctrl+Shift+I
+                (e.metaKey && e.altKey && e.key === 'I')          // Cmd+Opt+I (Mac)
+            ) {
+                e.preventDefault(); // Silencioso, sin alerta
+            }
+        });
+        </script>
+
+    
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('*').forEach(el => {
+      el.setAttribute('draggable', 'false');
+    });
+  });
+</script>
+
+</head>
+
+<body>
+    <div class="cuerpo">
+        <div class="boton">
+            <a class='boton1' href='#'>
+                <img class='boton1'
+                    onmouseover="playSoundAndChangeImage('swish1.mp3', 'mytyelllow4.png')"
+                    onmouseout="resetImage('mytblue4.png')"
+                    src='mytblue4.png'/>
+            </a>
+        </div>
+    </div>
+
+    <!-- Añadimos el botón mute -->
+    <img src="muted.png" alt="mute" class="mute" onclick="ocultarMute()">
+
+    <audio id="sonido" preload="auto">
+        <source src="swish1.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script>
+        function playSoundAndChangeImage(soundFileName, newImageSrc) {
+            var audio = document.getElementById('sonido');
+            audio.src = soundFileName;
+            audio.play();
+
+            var image = document.querySelector('.boton1 img');
+            image.src = newImageSrc;
+        }
+
+        function resetImage(originalImageSrc) {
+            var image = document.querySelector('.boton1 img');
+            image.src = originalImageSrc;
+        }
+
+        function ocultarMute() {
+            var muteButton = document.querySelector('.mute');
+            muteButton.style.display = 'none';
+            // También puedes añadir lógica para evitar que vuelva a aparecer.
+            document.removeEventListener('click', ocultarMute);
+        }
+
+        // Añadimos un evento para ocultar el mute al hacer clic en cualquier parte de la pantalla
+        document.addEventListener('click', ocultarMute);
+    </script>
+</body>
+
+</html>
+
+
+
