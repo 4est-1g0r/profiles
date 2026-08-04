@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>jaden</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+            <script>
+        // Bloquear clic derecho (sin mensaje)
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault(); // Solo esto, sin alert
+        });
+
+        // Bloquear atajos de teclado para DevTools (también sin alerta)
+        document.addEventListener('keydown', (e) => {
+            if (
+                e.ctrlKey && (e.key === 'u' || e.key === 'U') ||  // Ctrl+U
+                e.key === 'F12' ||                               // F12
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||     // Ctrl+Shift+I
+                (e.metaKey && e.altKey && e.key === 'I')          // Cmd+Opt+I (Mac)
+            ) {
+                e.preventDefault(); // Silencioso, sin alerta
+            }
+        });
+        </script>
+    
+    
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('*').forEach(el => {
+      el.setAttribute('draggable', 'false');
+    });
+  });
+</script>
+
+</head>
+<body>
+    <div class="rectangle">
+        <div class="title-bar">
+            <img src="madebySchro.png" alt="made by Schroederz" class="title-img">
+            <img src="LIGHTSON1.png" alt="Light On" id="lightButton" class="control-button">
+            <img src="MIN1.png" alt="Minimize" id="minimizeButton" class="control-button">
+        </div>
+        <div class="section2">
+            <img src="SECTION2.png" alt="Section 2 Background" class="section2-img">
+            <img src="BRATLOGO.png" alt="" class="bratlogo">
+        </div>
+        <div class="section-4">
+            <div class="section4-text">
+            <span class="space-mono-bold">consectetur</span> adipiscing.
+            </div>
+            <img src="FRIENDSFONDO.png" alt="Friends Fondo">
+                <div class="buttons">
+                <a href="#">
+                    <img src="AMIGO1.png" alt="Amigo 1" class="btn amigo1">
+                </a>
+                <a href="#">
+                    <img src="AMIGO2.png" alt="Amigo 2" class="btn amigo2">
+                </a>
+                <a href="#"> 
+                    <img src="AMIGO3.png" alt="Amigo 3" class="btn amigo3">
+                </a>
+                </div>
+        </div>
+<div class="player">
+    <i class="fa-solid fa-backward" id="backwardButton"></i>
+    <i class="fa-solid fa-play" id="playButton"></i>
+    <i class="fa-solid fa-pause" id="pauseButton"></i>
+    <i class="fa-solid fa-forward" id="forwardButton"></i>
+    <div class="songTitleWrapper">
+        <div id="songTitle">Charli_xcx_-_Girl_so_confusing.mp3</div>
+    </div>
+    <audio id="audioPlayer" src="Charli_xcx_-_Girl_so_confusing.mp3"></audio>
+</div>
+        <div class="section-3">
+            <img src="CD1.png" id="cdImage" class="cdImage" style="/* display: none; */">
+            <img src="FONDOSECTION3.png" alt="Fondo Section 3" class="fondo-section3">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

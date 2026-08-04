@@ -1,0 +1,346 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('fondo2.png'); 
+    background-repeat: repeat;
+    overflow: hidden;
+}
+
+.rectangle {
+    width: 433px;
+    height: 352px;
+    background-color: rgba(76, 175, 80, 0); 
+    border-radius: 4px;
+    border: 1px solid #545454; 
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.95), 0 0 11px rgba(0, 0, 0, 0.98);
+    transition: height 0.3s ease; 
+    transform: scale(0.8); 
+    transform-origin: top left; 
+}
+
+
+.title-bar {
+    height: 18px;
+    background-color: rgba(0, 0, 0, 0.8); 
+    border-bottom: 1px solid #545454; 
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    cursor: move;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+}
+
+.control-button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none; 
+}
+
+#lightButton {
+    right: 25px; 
+}
+
+#minimizeButton {
+    right: 5px; 
+}
+
+#lightButton.default {
+    content: url('LIGHTSON1.png');
+}
+
+#lightButton.default:hover {
+    content: url('LIGHTSON2.png');
+}
+
+#lightButton.off {
+    content: url('LIGHTSOFF1.png');
+}
+
+#lightButton.off:hover {
+    content: url('LIGHTSOFF2.png');
+}
+
+#minimizeButton.default {
+    content: url('MIN1.png');
+}
+
+#minimizeButton.default:hover {
+    content: url('MIN2.png');
+}
+
+#minimizeButton.expanded {
+    content: url('EXPAND1.png');
+}
+
+#minimizeButton.expanded:hover {
+    content: url('EXPAND2.png');
+}
+
+
+.title-img {
+    pointer-events: none; 
+    user-select: none;
+    transition: opacity 0.3s ease; 
+}
+
+.title-bar:hover .title-img {
+    opacity: 0; 
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rectangle {
+    position: absolute;
+}
+
+.section2 {
+    position: absolute;
+    top: 18px; 
+    left: 0;
+    width: 433px; 
+    height: 137px;
+    overflow: hidden; 
+    box-shadow: 0 0 40px rgba(0, 0, 0, 99);
+    z-index: 8; 
+}
+
+.section2-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    pointer-events: none; 
+    user-select: none; 
+    -webkit-user-drag: none; 
+}
+
+.bratlogo {
+    position: absolute;
+    right: 5px;
+    top: 3px; 
+    width: 290px; 
+    height: 131px;
+    pointer-events: auto; 
+    user-select: none;
+    -webkit-user-drag: none; 
+    z-index: 1; 
+}
+
+.bratlogo:hover {
+    filter: brightness(0) invert(1) drop-shadow(0 0 13px rgba(0, 0, 0, 1)) drop-shadow(0 0 13px rgba(0, 0, 0, 0.58)); 
+}
+
+.player {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#playButton {
+    position: absolute;
+    bottom: 128px;
+    right: 98px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    display: none; 
+}
+
+#pauseButton {
+    position: absolute;
+    bottom: 128px;
+    right: 100px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    display: none; 
+}
+
+#forwardButton {
+    position: absolute;
+    bottom: 132px;
+    right: 79px;
+    font-size: 12px;
+    color: black;
+    cursor: pointer;
+}
+
+
+#backwardButton {
+    position: absolute;
+    bottom: 132px;
+    right: 122px;
+    font-size: 12px;
+    color: black;
+    cursor: pointer;
+}
+
+.songTitleWrapper {
+    position: absolute;
+    bottom: 151px; 
+    right: 8px;
+    width: 205px;
+    overflow: hidden; 
+    font-family: 'Space Mono', monospace; 
+    font-size: 13px;
+}
+
+#songTitle {
+    white-space: nowrap; 
+    animation: marquee 10s linear infinite; 
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+.section-3 {
+    position: relative;
+    width: 433px;
+    height: auto;
+    padding-top: 125px; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; 
+    pointer-events: none; 
+    user-select: none;
+    -webkit-user-drag: none; 
+}
+
+#cdImage {
+    position: absolute;
+    bottom: -45px;
+    left: 8px;
+    width: 200px; 
+    height: 200px; 
+    transform-origin: center;
+    z-index: 5; 
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 5)) drop-shadow(0 0 11px rgba(0, 0, 0, 0.18));
+    animation: rotation 2s infinite linear;
+    animation-play-state: paused; 
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+.fondo-section3 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+
+.section-4 {
+    width: 433px;
+    height: 95px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url('FRIENDSFONDO.png');
+    background-size: cover;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 99);
+    overflow: hidden; 
+}
+
+.section-4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('FRIENDSFONDO.png');
+    background-size: cover;
+    pointer-events: none; 
+    user-select: none; 
+    -webkit-user-drag: none; 
+    z-index: 1; 
+}
+
+
+
+.buttons {
+    position: absolute;
+    bottom: 12px;
+    left: 20px;
+    display: flex;
+    gap: 18px; 
+    pointer-events: all; 
+    z-index: 3; 
+    user-select: none; 
+}
+
+.btn {
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.amigo1:hover {
+    content: url('AMIGO1F.png'); 
+}
+
+.amigo2:hover {
+    content: url('AMIGO2F.png'); 
+}
+
+.amigo3:hover {
+    content: url('AMIGO3F.png'); 
+}
+
+
+.section4-text {
+    color: black; 
+    position: absolute;
+    bottom: 70px; 
+    left: 20px; 
+    right: 22px; 
+    line-height: 1;
+    text-align: justify;
+    font-family: "Space Mono", monospace; 
+    font-weight: 400; 
+    font-style: normal; 
+    user-select: text; 
+    z-index: 2; 
+}
+
+.section4-text .space-mono-bold {
+    font-weight: 700; 
+}
